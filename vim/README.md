@@ -13,6 +13,9 @@ Vim 是从 vi 发展出来的一个文本编辑器。代码补全、编译及错
 简单的来说， vi 是老式的字处理器，不过功能已经很齐全了，但是还是有可以进步的地方。 vim 则可以说是程序开发者的一项很好用的工具。
 
 连 vim 的官方网站 (https://www.vim.org/) 自己也说 vim 是一个程序开发工具而不是文字处理软件。
+
+vim键位图：
+![RUNOOB](https://www.runoob.com/wp-content/uploads/2015/10/vi-vim-cheat-sheet-sch.gif)
 * * *
 # vim的使用
 
