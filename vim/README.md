@@ -100,9 +100,9 @@ OK，我们要存档了，存盘并离开的指令很简单，输入 **:wq** 即
 除了上面简易范例的 i, Esc, :wq 之外，其实 vim 还有非常多的按键可以使用。
 
 ## 第一部分：一般模式可用的光标移动、复制粘贴、搜索替换等
-<table align=center>
+<table width=100% align=center>
 	<tr>
-	    <th>光标移动的方法</th>
+	    <caption backgroud-color=black color=white>光标移动的方法</caption>
 	</tr >
 </table>
 |:----------:|:------|
