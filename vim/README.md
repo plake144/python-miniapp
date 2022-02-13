@@ -101,7 +101,10 @@ OK，我们要存档了，存盘并离开的指令很简单，输入 **:wq** 即
 
 ## 第一部分：一般模式可用的光标移动、复制粘贴、搜索替换等
 <table>
-|光标移动的方法||
+	<tr>
+	    <th>光标移动的方法</th>
+	</tr >
+|||
 |:----------:|:------|
 |<kbd>h</kbd> 或 <kbd>←</kbd>|光标向左移动一个字符|
 |<kbd>j</kbd> 或 <kbd>↓</kbd>|光标向下移动一个字符|
@@ -123,5 +126,72 @@ OK，我们要存档了，存盘并离开的指令很简单，输入 **:wq** 即
 |<kbd>G</kbd>|移动到这个档案的最后一行(常用)|
 |n<kbd>G</kbd>|n 为数字。移动到这个档案的第 n 行。例如 20G 则会移动到这个档案的第 20 行(可配合 :set nu)|
 |<kbd>g</kbd><kbd>g</kbd>|移动到这个档案的第一行，相当于 1G 啊！ (常用)|
-|n<kbd>Enter</kbd>|n 为数字。光标向下移动 n 行(常用)|		
+|n<kbd>Enter</kbd>|n 为数字。光标向下移动 n 行(常用)|
+<table>
+	<tr>
+	    <th>属性</th>
+	    <th>属性值</th>
+	    <th>描述</th>  
+	</tr >
+	<tr >
+	    <td rowspan="9">type</td>
+	    <td>text</td>
+	    <td>单行文本输入框</td>
+	</tr>
+	<tr>
+	    <td>password</td>
+	    <td>密码输入框</td>
+	</tr>
+	<tr>
+	    <td>radio</td>
+	    <td>单选按钮</td>
+	</tr>
+	<tr>
+	    <td>CheckBox</td>
+	    <td>复选按钮</td>
+	</tr>
+	<tr><td>button</td>
+	    <td>普通按钮</td>
+	</tr>
+	<tr>
+	    <td>submit</td>
+	    <td>提交按钮</td>
+	</tr>
+	<tr>
+	    <td>reset</td>
+	    <td>重置按钮</td>
+	</tr>
+	<tr>
+	    <td>image</td>
+	    <td>图像形式的提交按钮</td>
+	</tr>
+	<tr>
+	    <td >file</td>
+	    <td>文件域</td>
+	</tr>
+	<tr>
+	    <td >name</td>
+	    <td>用户自定义</td>
+	    <td>控件名称</td>
+	</tr>
+	<tr>
+	    <td >value</td>
+	    <td >用户自定义</td>
+	    <td >默认文本值</td>
+	</tr>
+	<tr>
+	    <td >size</td>
+	    <td >正整数</td>
+	    <td >控件在页面中的显示宽度</td>
+	</tr>
+	<tr>
+	    <td >checked</td>
+	    <td >checked</td>
+	    <td >定义选择控件默认被选中项</td>
+	</tr>
+	<tr>
+	    <td >maxlength</td>
+	    <td >正整数</td>
+	    <td >控件允许输入的最多字符</td>
+	</tr>
 </table>
