@@ -100,98 +100,128 @@ OK，我们要存档了，存盘并离开的指令很简单，输入 **:wq** 即
 除了上面简易范例的 i, Esc, :wq 之外，其实 vim 还有非常多的按键可以使用。
 
 ## 第一部分：一般模式可用的光标移动、复制粘贴、搜索替换等
-<table width=100% align=center>
-	<tr>
-	    <caption>光标移动的方法</caption>
-	</tr >
+
+<table border=2 width=100%>
+    <tr>
+        <th colspan="2" bg-color=black>光标移动的方法</th>
+    </tr>
+    <tr>
+        <td><kbd>h</kbd> 或 <kbd>←</kbd></td>
+        <td>光标向左移动一个字符</td>
+    </tr>
+    <tr>
+        <td><kbd>j</kbd> 或 <kbd>↓</kbd></td>
+        <td>光标向下移动一个字符</td>
+    </tr>
+    <tr>
+        <td><kbd>k</kbd> 或 <kbd>↑</kbd></td>
+        <td>光标向上移动一个字符</td>
+    </tr>
+    <tr>
+        <td><kbd>l</kbd> 或 <kbd>→</kbd></td>
+        <td>光标向右移动一个字符</td>
+    </tr>
+    <tr>
+        <td colspan="2">如果你将右手放在键盘上的话，你会发现 hjkl 是排列在一起的，因此可以使用这四个按钮来移动光标。 如果想要进行多次移动的话，例如向下移动 30 行，可以使用 "30j" 或 "30↓" 的组合按键， 亦即加上想要进行的次数(数字)后，按下动作即可！</td>
+    </tr>
+    <tr>
+        <td><kbd>Ctrl</kbd> + <kbd>f</kbd></td>
+        <td>屏幕『向下』移动一页，相当于 <kbd>Page Down</kbd>按键 (常用)</td>
+    </tr>
+    <tr>
+        <td><kbd>Ctrl</kbd> + <kbd>b</kbd></td>
+        <td>屏幕『向上』移动一页，相当于 <kbd>Page Up</kbd> 按键 (常用)</td>
+    </tr>
+    <tr>
+        <td><kbd>Ctrl</kbd> + <kbd>d</kbd></td>
+        <td>屏幕『向下』移动半页</td>
+    </tr>
+    <tr>
+        <td><kbd>Ctrl</kbd> + <kbd>u</kbd></td>
+        <td>屏幕『向上』移动半页</td>
+    </tr>
+    <tr>
+        <td><kbd>+</kbd></td>
+        <td>光标移动到非空格符的下一行</td>
+    </tr>
+    <tr>
+        <td><kbd>-</kbd></td>
+        <td>光标移动到非空格符的上一行</td>
+    </tr>
+    <tr>
+        <td>n + <kbd>space</kbd></td>
+        <td>那个 n 表示『数字』，例如 20 。按下数字后再按空格键，光标会向右移动这一行的 n 个字符。例如 20\<space\> 则光标会向后面移动 20 个字符距离。</td>
+    </tr>
+    <tr>
+        <td><kbd>0</kbd> 或功能键<kbd>Home</kbd></td>
+        <td>这是数字『 0 』：移动到这一行的最前面字符处 (常用)</td>
+    </tr>
+    <tr>
+        <td><kbd>$</kbd> 或功能键<kbd>End</kbd></td>
+        <td>移动到这一行的最后面字符处(常用)</td>
+    </tr>
+    <tr>
+        <td><kbd>H</kbd></td>
+        <td>光标移动到这个屏幕的最上方那一行的第一个字符</td>
+    </tr>
+    <tr>
+        <td><kbd>M</kbd></td>
+        <td>光标移动到这个屏幕的中央那一行的第一个字符</td>
+    </tr>
+    <tr>
+        <td><kbd>L</kbd></td>
+        <td>光标移动到这个屏幕的最下方那一行的第一个字符</td>
+    </tr>
+    <tr>
+        <td><kbd>G</kbd></td>
+        <td>移动到这个档案的最后一行(常用)</td>
+    </tr>
+    <tr>
+        <td>n<kbd>G</kbd></td>
+        <td>n 为数字。移动到这个档案的第 n 行。例如 20G 则会移动到这个档案的第 20 行(可配合 :set nu)</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><kbd>g</kbd><kbd>g</kbd></td>
+        <td>移动到这个档案的第一行，相当于 1G 啊！ (常用)</td>
+    </tr>
+    <tr>
+        <td>n<kbd>Enter</kbd></td>
+        <td>n 为数字。光标向下移动 n 行(常用)</td>
+    </tr>
+    <tr>
+        <th colspan="2" bg-color=black>搜索替换</th>
+    </tr>
+    <tr>
+        <td><kbd>/</kbd> + \<word\></td>
+        <td>向光标之下寻找一个名称为 word 的字符串。例如要在档案内搜寻 vbird 这个字符串，就输入 /vbird 即可！ (常用)</td>
+    </tr>
+    <tr>
+        <td><kbd>?</kbd> + \<word></td>
+        <td>向光标之上寻找一个字符串名称为 word 的字符串。</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+    </tr>
 </table>
-|:----------:|:------|
-|<kbd>h</kbd> 或 <kbd>←</kbd>|光标向左移动一个字符|
-|<kbd>j</kbd> 或 <kbd>↓</kbd>|光标向下移动一个字符|
-|<kbd>k</kbd> 或 <kbd>↑</kbd>|光标向上移动一个字符|
-|<kbd>l</kbd> 或 <kbd>→</kbd>|光标向右移动一个字符|
-||如果你将右手放在键盘上的话，你会发现 hjkl 是排列在一起的，因此可以使用这四个按钮来移动光标。 如果想要进行多次移动的话，例如向下移动 30 行，可以使用 "30j" 或 "30↓" 的组合按键， 亦即加上想要进行的次数(数字)后，按下动作即可！|
-|<kbd>Ctrl</kbd> + <kbd>f</kbd>|屏幕『向下』移动一页，相当于 <kbd>Page Down</kbd>按键 (常用)|
-|<kbd>Ctrl</kbd> + <kbd>b</kbd>|屏幕『向上』移动一页，相当于 <kbd>Page Up</kbd> 按键 (常用)|
-|<kbd>Ctrl</kbd> + <kbd>d</kbd>|屏幕『向下』移动半页|
-|<kbd>Ctrl</kbd> + <kbd>u</kbd>|屏幕『向上』移动半页|
-|<kbd>+</kbd>|光标移动到非空格符的下一行|
-|<kbd>-</kbd>|光标移动到非空格符的上一行|
-|n + <kbd>space</kbd>|那个 n 表示『数字』，例如 20 。按下数字后再按空格键，光标会向右移动这一行的 n 个字符。例如 20\<space\> 则光标会向后面移动 20 个字符距离。|
-|<kbd>0</kbd> 或功能键<kbd>Home</kbd>|这是数字『 0 』：移动到这一行的最前面字符处 (常用)|
-|<kbd>$</kbd> 或功能键<kbd>End</kbd>|移动到这一行的最后面字符处(常用)|
-|<kbd>H</kbd>|光标移动到这个屏幕的最上方那一行的第一个字符|
-|<kbd>M</kbd>|光标移动到这个屏幕的中央那一行的第一个字符|
-|<kbd>L</kbd>|光标移动到这个屏幕的最下方那一行的第一个字符|
-|<kbd>G</kbd>|移动到这个档案的最后一行(常用)|
-|n<kbd>G</kbd>|n 为数字。移动到这个档案的第 n 行。例如 20G 则会移动到这个档案的第 20 行(可配合 :set nu)|
-|<kbd>g</kbd><kbd>g</kbd>|移动到这个档案的第一行，相当于 1G 啊！ (常用)|
-|n<kbd>Enter</kbd>|n 为数字。光标向下移动 n 行(常用)|
-<table>
-	<tr>
-	    <th>属性</th>
-	    <th>属性值</th>
-	    <th>描述</th>  
-	</tr >
-	<tr >
-	    <td rowspan="9">type</td>
-	    <td>text</td>
-	    <td>单行文本输入框</td>
-	</tr>
-	<tr>
-	    <td>password</td>
-	    <td>密码输入框</td>
-	</tr>
-	<tr>
-	    <td>radio</td>
-	    <td>单选按钮</td>
-	</tr>
-	<tr>
-	    <td>CheckBox</td>
-	    <td>复选按钮</td>
-	</tr>
-	<tr><td>button</td>
-	    <td>普通按钮</td>
-	</tr>
-	<tr>
-	    <td>submit</td>
-	    <td>提交按钮</td>
-	</tr>
-	<tr>
-	    <td>reset</td>
-	    <td>重置按钮</td>
-	</tr>
-	<tr>
-	    <td>image</td>
-	    <td>图像形式的提交按钮</td>
-	</tr>
-	<tr>
-	    <td >file</td>
-	    <td>文件域</td>
-	</tr>
-	<tr>
-	    <td >name</td>
-	    <td>用户自定义</td>
-	    <td>控件名称</td>
-	</tr>
-	<tr>
-	    <td >value</td>
-	    <td >用户自定义</td>
-	    <td >默认文本值</td>
-	</tr>
-	<tr>
-	    <td >size</td>
-	    <td >正整数</td>
-	    <td >控件在页面中的显示宽度</td>
-	</tr>
-	<tr>
-	    <td >checked</td>
-	    <td >checked</td>
-	    <td >定义选择控件默认被选中项</td>
-	</tr>
-	<tr>
-	    <td >maxlength</td>
-	    <td >正整数</td>
-	    <td >控件允许输入的最多字符</td>
-	</tr>
-</table>
+ 	
+ 	
+n 	这个 n 是英文按键。代表重复前一个搜寻的动作。举例来说， 如果刚刚我们执行 /vbird 去向下搜寻 vbird 这个字符串，则按下 n 后，会向下继续搜寻下一个名称为 vbird 的字符串。如果是执行 ?vbird 的话，那么按下 n 则会向上继续搜寻名称为 vbird 的字符串！
+N 	这个 N 是英文按键。与 n 刚好相反，为『反向』进行前一个搜寻动作。 例如 /vbird 后，按下 N 则表示『向上』搜寻 vbird 。
+使用 /word 配合 n 及 N 是非常有帮助的！可以让你重复的找到一些你搜寻的关键词！
+:n1,n2s/word1/word2/g 	n1 与 n2 为数字。在第 n1 与 n2 行之间寻找 word1 这个字符串，并将该字符串取代为 word2 ！举例来说，在 100 到 200 行之间搜寻 vbird 并取代为 VBIRD 则：
+『:100,200s/vbird/VBIRD/g』。(常用)
+:1,$s/word1/word2/g 或 :%s/word1/word2/g 	从第一行到最后一行寻找 word1 字符串，并将该字符串取代为 word2 ！(常用)
+:1,$s/word1/word2/gc 或 :%s/word1/word2/gc 	从第一行到最后一行寻找 word1 字符串，并将该字符串取代为 word2 ！且在取代前显示提示字符给用户确认 (confirm) 是否需要取代！(常用)
