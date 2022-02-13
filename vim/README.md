@@ -102,7 +102,7 @@ OK，我们要存档了，存盘并离开的指令很简单，输入 **:wq** 即
 ## 第一部分：一般模式可用的光标移动、复制粘贴、搜索替换等
 <table width=100% align=center>
 	<tr>
-	    <caption backgroud-color=black color=white>光标移动的方法</caption>
+	    <caption>光标移动的方法</caption>
 	</tr >
 </table>
 |:----------:|:------|
